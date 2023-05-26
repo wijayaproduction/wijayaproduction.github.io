@@ -15,40 +15,6 @@ height: 600px;
   height: 470px;
   top: -50px;
 }
-/*
-.development-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  background-color: #fff;
-  width: 400px;
-  max-width: 90%;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.development-popup p {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.development-popup .close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  color: #888;
-  cursor: pointer;
-}
-
-.development-popup .close-button:hover {
-  color: #555;
-}
-*/
 .custom-card {
   background: #F1F1F1;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -71,11 +37,7 @@ height: 600px;
 .custom-card:hover .custom-card-header {
   background-color: #c41a22;
 }
-/*
-.custom-card:hover .custom-card-title {
-  color: black;
-}
-*/
+
 .custom-card:hover .custom-card-body {
   background-color: #ffcccc;
 }
@@ -111,8 +73,34 @@ height: 600px;
     height: 280px;
     top: -50px;
   }
+}
+  /*
 .carousel-indicators {
-  top: 150px;
+  top: 190px;
+  } 
+}  
+*/
+
+@media screen and (max-width: 768px) {
+  .responsive-img {
+      max-width: 70%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+  }
+}
+.responsive-img {
+  max-width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 576px) {
+  .responsive-img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }
 /* loading */
