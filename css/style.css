@@ -1,0 +1,558 @@
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+
+.logo {
+  width: 5%;
+}
+
+.iframeMap {
+  width: 85%;
+  height: 600px;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Sesuaikan dengan lebar yang diinginkan */
+  max-width: 1600px; /* Set maximum width */
+  max-height: 1137px; /* Set maximum height */
+}
+
+.close-button {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.img-pop {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.responsive-img {
+  max-width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .custom-card {
+    border-radius: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .responsive-img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* Tampilan MOBILE */
+@media screen and (max-width: 768px) {
+  .popup-content {
+    width: 90%;
+  }
+  /* IFRAME YT RESPONSIVW */
+  .iframeYT1 {
+    width: 100%;
+    height: 280px;
+    top: -50px;
+  }
+  .iframeYT3 {
+    width: 100%;
+    height: 280px;
+    top: -50px;      
+  }
+  .iframeYT4 {
+    width: 100%;
+    height: 280px;
+    top: -50px;      
+  }
+  .responsive-img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .popup-content {
+    width: 70%;
+  }
+  /* Tampilan TABLET */
+  .iframeYT1 {
+    width: 100%;
+    height: 283px;
+    top: -50px;
+  }
+  .iframeYT3 {
+    width: 100%;
+    height: 283px;
+    top: -50px;
+  }
+  .iframeYT4 {
+    width: 100%;
+    height: 283px;
+    top: -50px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .popup-content {
+    width: 50%;
+  }
+  /* Tampilan desktop */
+  .iframeYT1 {
+    width: 100%;
+    height: 470px;
+    top: -50px;
+  }
+  .iframeYT3 {
+    width: 100%;
+    height: 470px;
+    top: -50px;
+  }
+  .iframeYT4 {
+    width: 100%;
+    height: 470px;
+    top: -50px;
+  }
+}
+
+
+/* IFRAME YT 1 KHATAMAN AL-QUR'AN */
+.iframeYT1 {
+  width: 560px;
+  height: 315px;
+  top: -50px;
+}
+.iframeYT3 {
+  width: 500px;
+  height: 400px;
+  top: -50px;
+}
+.iframeYT4 {
+  width: 500px;
+  height: 280px;
+  top: -50px;
+}
+
+/*
+.carousel-indicators {
+  top: 190px;
+  } 
+}  
+*/
+
+.custom-card {
+  background: #F1F1F1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px 0px 20px 20px;
+}
+
+.custom-card-header {
+  height: 60px;
+  padding: 20px;
+  background-color: #3f3f3f;
+  border-radius: 50px 0px 0px 0px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.custom-card-body {
+  transition: background-color 0.3s;
+}
+
+.custom-card:hover .custom-card-header {
+  background-color: #c41a22;
+}
+
+.custom-card:hover .custom-card-body {
+  background-color: #ffcccc;
+}
+
+
+.custom-card-body {
+  padding: 1rem;
+}
+
+.custom-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.custom-card-text {
+  font-size: 1rem;
+}
+
+/* loading */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-video {
+  max-width: 30%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* loading video */
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.bawah-banner {
+  height: 30px;
+  width: 100%;
+}
+
+section {
+  min-height: auto;
+}
+
+.single_advisor_profile {
+  position: relative;
+  margin-bottom: 50px;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  z-index: 1;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+  box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+}
+
+.single_advisor_profile .advisor_thumb {
+  position: relative;
+  z-index: 1;
+  border-radius: 15px 15px 0 0;
+  margin: 0 auto;
+  padding: 30px 30px 0 30px;
+  background-color: #ad3137;
+  overflow: hidden;
+}
+
+.single_advisor_profile .advisor_thumb::after {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  position: absolute;
+  width: 150%;
+  height: 80px;
+  bottom: -45px;
+  left: -25%;
+  content: "";
+  background-color: #ffffff;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+
+@media only screen and (max-width: 575px) {
+  .single_advisor_profile .advisor_thumb::after {
+    height: 160px;
+    bottom: -90px;
+  }
+}
+
+.single_advisor_profile .advisor_thumb .social-info {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  bottom: 0;
+  right: 30px;
+  text-align: right;
+}
+
+.single_advisor_profile .advisor_thumb .social-info a {
+  font-size: 14px;
+  color: #020710;
+  padding: 0 5px;
+}
+
+.single_advisor_profile .advisor_thumb .social-info a:hover,
+.single_advisor_profile .advisor_thumb .social-info a:focus {
+  color: #ad3137;
+}
+
+.single_advisor_profile .advisor_thumb .social-info a:last-child {
+  padding-right: 0;
+}
+
+.single_advisor_profile .single_advisor_details_info {
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  text-align: right;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  border-radius: 0 0 15px 15px;
+  background-color: #ffffff;
+}
+
+.single_advisor_profile .single_advisor_details_info::after {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 3px;
+  background-color: #ad3137;
+  content: "";
+  top: 12px;
+  right: 30px;
+}
+
+.single_advisor_profile .single_advisor_details_info h6 {
+  margin-bottom: 0.25rem;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .single_advisor_profile .single_advisor_details_info h6 {
+    font-size: 14px;
+  }
+}
+
+.single_advisor_profile .single_advisor_details_info p {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .single_advisor_profile .single_advisor_details_info p {
+    font-size: 12px;
+
+  }
+}
+
+.single_advisor_profile:hover .advisor_thumb::after,
+.single_advisor_profile:focus .advisor_thumb::after {
+  background-color: #7c0620;
+}
+
+.single_advisor_profile:hover .advisor_thumb .social-info a,
+.single_advisor_profile:focus .advisor_thumb .social-info a {
+  color: #ffffff;
+}
+
+.single_advisor_profile:hover .advisor_thumb .social-info a:hover,
+.single_advisor_profile:hover .advisor_thumb .social-info a:focus,
+.single_advisor_profile:focus .advisor_thumb .social-info a:hover,
+.single_advisor_profile:focus .advisor_thumb .social-info a:focus {
+  color: #ffffff;
+}
+
+.single_advisor_profile:hover .single_advisor_details_info,
+.single_advisor_profile:focus .single_advisor_details_info {
+  background-color: #7c0620;
+}
+
+.single_advisor_profile:hover .single_advisor_details_info::after,
+.single_advisor_profile:focus .single_advisor_details_info::after {
+  background-color: #ffffff;
+}
+
+.single_advisor_profile:hover .single_advisor_details_info h6,
+.single_advisor_profile:focus .single_advisor_details_info h6 {
+  color: #ffffff;
+}
+
+.single_advisor_profile:hover .single_advisor_details_info p,
+.single_advisor_profile:focus .single_advisor_details_info p {
+  color: #ffffff;
+}
+
+.modal-fullscreen {
+  max-width: 100%;
+  margin: 0;
+}
+
+.btn-fullscreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  z-index: 999;
+}
+
+.btn-close-fullscreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  display: none;
+  z-index: 999;
+}
+
+.model-content {
+  background-color: rgb(255, 255, 255);
+}
+
+#social-platforms {
+  position: relative;
+  font-size: 1rem;
+  text-align: center;
+  height: 250px;
+  overflow: hidden;
+}
+
+/*Pen code from this point on*/
+.btn {
+  clear: both;
+  white-space: nowrap;
+  font-size: .8em;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px 0 rgb(255, 255, 255);
+  margin-top: 5px;
+  margin: 7px;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+  overflow: hidden
+}
+
+.btn:hover {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.45);
+}
+
+.btn:focus {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn>span,
+.btn-icon>i {
+  float: left;
+  padding: 13px;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+  line-height: 1em
+}
+
+.btn>span {
+  padding: 14px 18px 16px;
+  white-space: nowrap;
+  color: #FFF;
+  background: #b8b8b8
+}
+
+.btn:focus>span {
+  background: #9a9a9a
+}
+
+.btn-icon>i {
+  border-radius: 5px 0 0 5px;
+  position: relative;
+  width: 13px;
+  text-align: center;
+  font-size: 1.25em;
+  color: #fff;
+  background: #212121
+}
+
+.btn-icon>i:after {
+  content: "";
+  border: 8px solid;
+  border-color: transparent transparent transparent #222;
+  position: absolute;
+  top: 13px;
+  right: -15px
+}
+
+.btn-icon:hover>i,
+.btn-icon:focus>i {
+  color: #FFF
+}
+
+.btn-icon>span {
+  border-radius: 0 5px 5px 0
+}
+
+/*Facebook*/
+.btn-facebook:hover>i,
+.btn-facebook:focus>i {
+  color: #3b5998
+}
+
+.btn-facebook>span {
+  background: #3b5998
+}
+
+/*Twitter*/
+.btn-whatsapp:hover>i,
+.btn-whatsapp:focus>i {
+  color: #25c05e
+}
+
+.btn-whatsapp>span {
+  background: #25c05e
+}
+
+/*Google*/
+.btn-youtube:hover>i,
+.btn-youtube:focus>i {
+  color: #FF0000
+}
+
+.btn-youtube>span {
+  background: #FF0000
+}
+
+/*LinkedIn*/
+.btn-instagram:hover>i,
+.btn-instagram:focus>i {
+  color: #E4405F
+}
+
+.btn-instagram>span {
+  background: #E4405F
+}
