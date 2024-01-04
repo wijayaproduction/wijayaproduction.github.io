@@ -811,7 +811,7 @@
 
     <br>
     <p>Alamat : Gg. Jeruk 1 Jl. Gotong Royong No. 13, Pejeruk, Kec. Ampenan, Kota Mataram, NTB 83125 </p>
-          <p style="margin: 5px;" >&copy; Copyright 2023 | <a href="https://www.facebook.com/profile.php?id=61553240002855&mibextid=ZbWKwL" target="_blank"
+          <p style="margin: 5px;" >&copy; Copyright <span id="tahun"></span> | <a href="https://www.facebook.com/profile.php?id=61553240002855&mibextid=ZbWKwL" target="_blank"
         class="fw-bold text-white">Aar Saputra </a></p>
   </footer>
 
@@ -856,7 +856,12 @@
       }
     });
 
-
+    document.addEventListener("DOMContentLoaded", function() {
+    var tahunElemen = document.getElementById("tahun");
+    var tahunSekarang = new Date().getFullYear();
+    
+    tahunElemen.textContent = tahunSekarang;
+  });
     AOS.init();
   </script>
 </body>
