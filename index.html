@@ -64,7 +64,7 @@
   <div class="popup-container">
     <div class="popup-content">
       <span class="close-button">&times;</span>
-      <img class="img-pop" src="img/brosur.jpg" alt="Gambar Pop-up">
+      <img class="img-pop" src="img/brosur.webp" alt="Gambar Pop-up">
     </div>
   </div>
 
@@ -821,12 +821,22 @@
       var loadingOverlay = document.querySelector(".loading-overlay");
       var popupContainer = document.querySelector(".popup-container");
       var closeButton = document.querySelector(".close-button");
+      
+      // Mengatur video loading overlay agar diputar selama 5 detik
+var video = document.querySelector(".loading-video");
 
-      // Mengatur video loading overlay agar berputar loop
-      var video = document.querySelector(".loading-video");
-      video.addEventListener("canplay", function () {
-        video.play();
-      });
+// Memainkan video dan memberhentikannya setelah 5 detik
+function playVideoFor5Seconds() {
+    video.play(); // Memainkan video
+    setTimeout(function () {
+        video.pause(); // Memberhentikan pemutaran setelah 5 detik
+    }, 7000); // 5000 milidetik = 5 detik
+}
+
+// Menambahkan event listener untuk saat video dapat diputar
+video.addEventListener("canplay", function () {
+    playVideoFor5Seconds(); // Memanggil fungsi untuk memainkan video selama 5 detik
+});
 
       // Sembunyikan video loading overlay dan tampilkan pop-up setelah loading selesai
       window.addEventListener("load", function () {
